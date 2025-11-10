@@ -1,0 +1,40 @@
+module qwen3c3;
+import std::io;
+
+
+
+struct Config
+{
+	int dim;
+	int hidden_dim;
+	int n_layers;
+	int n_heads;
+	int n_kv_heads;
+	int vocab_size;
+	int seq_len;
+	int head_dim;
+}
+
+struct TransformerWeights
+{
+	float[] token_embedding_table;
+	float[] rms_att_weight;
+	float[] rms_ffn_weight;
+
+	float[] wq;
+	float[] wk;
+	float[] wv;
+	float[] wo;
+	float[] wq_norm;
+	float[] wk_norm;
+	float[] w1;
+	float[] w2;
+	float[] w3;
+	float[] rms_final_weight;
+	float[] wcls;
+}
+
+fn void main()
+{
+	
+}

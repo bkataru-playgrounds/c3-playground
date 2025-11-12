@@ -27,8 +27,39 @@ struct Rect
 	uint x, y, w, h;
 }
 
-struct Point {
+struct Point
+{
 	uint x, y;
+}
+
+typedef Label = ushort;
+
+struct Blob
+{
+	Label label;
+	uint area;
+	Rect box;
+	Point centroid;
+}
+
+struct Contour
+{
+	Rect box;
+	Point start;
+	uint length;
+}
+
+struct Keypoint
+{
+	Point pt;
+	uint response;
+	float angle;
+	uint[8] descriptor;
+}
+
+struct Match {
+	uint idx1, idx2;
+	uint distance;
 }
 
 fn void main()

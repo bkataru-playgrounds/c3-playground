@@ -57,10 +57,21 @@ struct Keypoint
 	uint[8] descriptor;
 }
 
-struct Match {
+struct Match
+{
 	uint idx1, idx2;
 	uint distance;
 }
+
+struct LbpCascade
+{
+	ushort window_w, window_h;
+	ushort nfeatures, nweaks, nstages;
+	
+	
+}
+
+
 
 fn void main()
 {
